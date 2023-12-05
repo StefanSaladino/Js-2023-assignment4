@@ -7,12 +7,16 @@ submitBtn.addEventListener("click", fetchResults);
 function fetchResults(event) {
     event.preventDefault();
 
+    //search string becomes what was submitted in the search bar
     let searchString = searchTerm.value;
+    //cannot have whitespace in a url
     let urlString = searchString.replace(/ /g, '%20');
+    //adding the search string to the url
     let finalUrl = `${url}${urlString}&gl=ca&lr=lang_en&num=10&start=0`;
 
     console.log(finalUrl);
 
+    //getting rapid api parameters (key and host)
     const options = {
         method: 'GET',
         headers: {
@@ -21,6 +25,7 @@ function fetchResults(event) {
         }
     };
 
+    //calling the fetch api
     fetch(finalUrl, options)
         .then(response => response.json())
         .then(json => displayResults(json))
