@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<title>JS Assignment 4 | COMP1073 Client-Side JavaScript</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="./CSS/style.css" rel="stylesheet" />
-	<script src="./JS/script.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS Assignment 4 | COMP1073 Client-Side JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./CSS/style.css" rel="stylesheet" />
+    <link href="./CSS/normalize.css" rel="stylesheet" />
+    <script src="./JS/script.js" defer></script>
+  </head>
+  <header>
+    <div>COMP 1073 Assignment 4</div>
+    <div id="studentNumber"></div>
+  </header>
+  <body>
+    <div id="queryDiv"></div>
     <form>
-        <p>
-            <label for="search">Enter a SINGLE search term (required): </label>
-            <input type="text" id="search" class="search" required>
-            <button id="submitBtn">SEARCH</button>
-        </p>
+      <div id="searchDiv">
+        <input
+          type="text"
+          id="search"
+          class="search"
+          placeholder="Search for something"
+          required />
+        <button id="submitBtn">SEARCH</button>
+      </div>
     </form>
-
-</body>
+    <div class="results">
+      <section></section>
+      <div id="directionButtons">
+        <button id="backButton">BACK</button>
+        <button id="nextButton">NEXT</button>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Special thanks and acknowledgement to NEOSCRAPS of rapidAPI for creating
+        the Google Search API which was utilized in this project.
+      </p>
+      <p>
+        Link and tutorials
+        <a href="https://rapidapi.com/neoscrap-net/api/google-search72"
+          >here:</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
